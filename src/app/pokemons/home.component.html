@@ -1,10 +1,20 @@
-<nav>
-  <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="">
-</nav>
-<div class="container">
-  @for ( pokemon of pokemonList; track $index;) {
-    <app-card-pokemons [pokemon]="pokemon"></app-card-pokemons>
-  }@empty {
-    <span class="loader"></span>
-  }
+<div class="main-container">
+  <nav>
+    <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="">
+  </nav>
+  <div class="container-pokemon">
+    @for (pokemon of pokemonList; track $index; ) {
+      <app-card-pokemons [pokemon]="pokemon"></app-card-pokemons>
+    } @empty {
+      <span class="loader"></span>
+    }
+  </div>
+
+  <div class="btn-float" (click)="open=!open">
+    <img src="https://pngimg.com/uploads/pokeball/pokeball_PNG29.png" alt="" width="70px" style="cursor:pointer;">
+  </div>
+  <div class="modal-open" *ngIf="open">
+
+  </div>
+
 </div>

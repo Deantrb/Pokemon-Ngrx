@@ -7,12 +7,11 @@ import {PokemonChar} from '../models/pokemon.models';
 @Component({
   selector: 'app-home',
   standalone: false,
-
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-
+  open:boolean =false
   pokemonList:PokemonChar[] =[]
 
   constructor(private store: Store<AppState>) {}

@@ -10,4 +10,6 @@ import {PokemonChar} from '../../models/pokemon.models';
 export class CardPokemonsComponent {
   @Input() pokemon:PokemonChar|undefined
 
+
+
 }

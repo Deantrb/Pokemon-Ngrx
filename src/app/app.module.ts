@@ -18,6 +18,7 @@ import { HomeComponent } from './pokemons/home.component';
 import {CommonModule} from '@angular/common';
 import {CardPokemonsComponent} from './pokemons/card-pokemons/card-pokemons.component';
 import {StatBarComponent} from './pokemons/card-pokemons/stat-bar/stat-bar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {StatBarComponent} from './pokemons/card-pokemons/stat-bar/stat-bar.compo
     StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([PokemonsEffects]),
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: !isDevMode()}),
+    NgbModule,
 
 
   ],
