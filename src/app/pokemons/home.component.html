@@ -1,0 +1,10 @@
+<nav>
+  <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="">
+</nav>
+<div class="container">
+  @for ( pokemon of pokemonList; track $index;) {
+    <app-card-pokemons [pokemon]="pokemon"></app-card-pokemons>
+  }@empty {
+    <span class="loader"></span>
+  }
+</div>

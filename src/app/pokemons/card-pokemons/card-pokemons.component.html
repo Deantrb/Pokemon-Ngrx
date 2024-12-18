@@ -1,0 +1,19 @@
+<div class="header">
+  <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="">
+</div>
+<img [src]="pokemon?.avatar" alt="">
+<div class="tipo">
+  @for ( tipo of pokemon?.tipo; track $index;){
+    <button>
+      {{tipo | titlecase}}
+    </button>
+  }
+
+</div>
+<div class="list-stats">
+  <li><span>Ataque: </span> <app-stat-bar [statValue]="pokemon!.ataque"></app-stat-bar></li>
+  <li><span>Defensa: </span> <app-stat-bar [statValue]="pokemon!.defensa"></app-stat-bar></li>
+  <li><span>Velocidad: </span> <app-stat-bar [statValue]="pokemon!.velocidad"></app-stat-bar></li>
+</div>
+<div class="footer"><p>{{ pokemon?.name | uppercase }}</p></div>
+
