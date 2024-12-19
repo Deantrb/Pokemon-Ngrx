@@ -19,13 +19,17 @@ import {CommonModule} from '@angular/common';
 import {CardPokemonsComponent} from './pokemons/card-pokemons/card-pokemons.component';
 import {StatBarComponent} from './pokemons/card-pokemons/stat-bar/stat-bar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { VsComponent } from './pokemons/modal/vs/vs.component';
+import { ListComponent } from './pokemons/modal/list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CardPokemonsComponent,
-    StatBarComponent
+    StatBarComponent,
+    VsComponent,
+    ListComponent
 
   ],
   imports: [

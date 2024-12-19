@@ -11,7 +11,7 @@ export class PokemonService {
 
   getPokemons(){
     return  this.http.get("https://pokeapi.co/api/v2/pokemon/").pipe(
-      delay(3000),
+      delay(1000),
       map((res:any)=>res['results'])
     )
   }

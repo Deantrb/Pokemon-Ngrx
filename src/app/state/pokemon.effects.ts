@@ -35,11 +35,11 @@ export class PokemonsEffects {
                   velocidad
                 );
               });
-              return cargaPokemonsSuccess({ pokemons });
+              return cargaPokemonsSuccess({ pokemons});
             }),
             catchError(err => of(cargaPokemonError({payload:err})))
           );
-        }),  catchError((err) => of(cargaPokemonError({payload: err})))
+        }),catchError((err) => of(cargaPokemonError({payload: err})))
       ))
     )
   )

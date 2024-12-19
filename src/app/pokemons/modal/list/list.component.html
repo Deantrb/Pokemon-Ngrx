@@ -1,0 +1,33 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-title">Lista Pokemons </h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close button"
+    aria-describedby="modal-title"
+    (click)="modal.dismiss('Cross click')"
+  ></button>
+</div>
+<div class="modal-body">
+  <div class="pokemons-list">
+    @for (item of listPoke; track $index) {
+      <div class="list">
+        <div class="pokemn-card" [class.winner]="item.winner ===  item.pokemon1.name" [class.lost]="item.winner !==  item.pokemon1.name">
+          <h5 class="win" *ngIf="item.winner ===  item.pokemon1.name">Winner!</h5>
+          <h5 class="lo" *ngIf="item.winner !==  item.pokemon1.name">Lost!</h5>
+          <img [src]="item.pokemon1.avatar" alt="">
+          <p> {{item.pokemon1.name | titlecase}}</p>
+        </div>
+        <span class="vs">VS</span>
+        <div class="pokemn-card" [class.winner]="item.winner ===  item.pokemon2.name" [class.lost]="item.winner !==  item.pokemon2.name">
+          <h5 class="win" *ngIf="item.winner ===  item.pokemon2.name">Winner!</h5>
+          <h5 class="lo" *ngIf="item.winner !==  item.pokemon2.name">Lost!</h5>
+          <img [src]="item.pokemon2.avatar" alt="">
+          <p> {{item.pokemon2.name | titlecase}}</p>
+        </div>
+      </div>
+
+
+    }
+  </div>
+</div>
